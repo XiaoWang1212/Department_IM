@@ -40,3 +40,22 @@ function currentSlide(n) {
 
 resetTime();
 showSlide(0);
+
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.style.display = 'block';
+
+    if (sectionId === 'home') {
+        resetInterval();
+        showSlide(0);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    showSection('home');
+});
