@@ -340,7 +340,70 @@ nav ul li a:hover {
     text-align: justify;
 }
 
+@media (max-width: 1024px) {
+    .container-upper {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .container-upper nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .container-lower {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .container-lower nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 15px;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+    }
+
+    body {
+        padding-top: 28vh;
+    }
+}
+
 @media (max-width: 768px) {
+    .container-upper nav ul li a,
+    .container-lower nav ul li a {
+        font-size: 16px;
+    }
+
+    .header-logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .logo-text h1 {
+        font-size: 20px;
+    }
+
+    .slideshow-container {
+        height: 300px;
+        width: 90vw;
+    }
+
+    #info {
+        font-size: 30px;
+    }
+
+    body {
+        padding-top: 32vh;
+    }
+
     #about {
         padding: 20px 10px;
     }
@@ -359,5 +422,75 @@ nav ul li a:hover {
 
     #about p {
         text-align: left;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-text {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .footer-logo img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search input {
+        width: 200px;
+        height: 30px;
+    }
+
+    .container-upper nav ul li {
+        margin-right: 10px;
+    }
+
+    .container-upper nav ul li a,
+    .container-lower nav ul li a {
+        font-size: 14px;
+    }
+
+    .header-logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo-text h1 {
+        font-size: 18px;
+    }
+
+    .slideshow-container {
+        height: 200px;
+    }
+
+    .prev, .next {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #info {
+        font-size: 24px;
+    }
+
+    #about section {
+        padding: 15px;
+    }
+
+    #about h2 {
+        font-size: 22px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    body {
+        padding-top: 35vh;
     }
 }
