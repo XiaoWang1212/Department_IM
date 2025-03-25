@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IM Department</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-upper">
+        <div class="search">
+          <input type="text" />
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">設備借用系統</a></li>
+            <li><a href="#">問卷系統</a></li>
+            <li><a href="#">下載專區</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">管院首頁</a></li>
+            <li><a href="#">中大首頁</a></li>
+            <li><a href="#">登入</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container-lower">
+        <div class="logo">
+          <img
+            src="./assets/photo/logo.png"
+            alt="Department of Information Management"
+          />
+          <div class="logo-text">
+            <h1>資訊管理學系</h1>
+            <span>Department of Information Management</span>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">回首頁</a></li>
+            <li id="lowerText"><a href="#">關於本系</a></li>
+            <li id="lowerText"><a href="#">師資介紹</a></li>
+            <li id="lowerText"><a href="#">課程及獎學金</a></li>
+            <li id="lowerText"><a href="#">招生訊息</a></li>
+            <li id="lowerText"><a href="#">企業導師專區</a></li>
+            <li id="lowerText"><a href="#">活動剪影</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="slideshow-container">
+      <div class="slides-wrapper">
+        <div class="slide">
+          <img src="./assets/photo/slide1.png" alt="Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="./assets/photo/slide2.png" alt="Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="./assets/photo/slide3.png" alt="Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="./assets/photo/slide4.png" alt="Slide 4" />
+        </div>
+        <div class="slide">
+          <img src="./assets/photo/slide5.png" alt="Slide 5" />
+        </div>
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <h1 id="info">以下尚未製作，連結(router)同</h1>
+  </body>
+</html>
