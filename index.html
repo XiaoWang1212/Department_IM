@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IM Department</title>
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container-upper">
+        <div class="search">
+          <input type="text" />
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">聯絡我們</a></li>
+            <li><a href="#">設備借用系統</a></li>
+            <li><a href="#">問卷系統</a></li>
+            <li><a href="#">下載專區</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">管院首頁</a></li>
+            <li><a href="#">中大首頁</a></li>
+            <li><a href="#">登入</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container-lower">
+        <div class="header-logo">
+          <img
+            src="./assets/photo/logo.png"
+            alt="Department of Information Management"
+          />
+          <div class="logo-text">
+            <h1>資訊管理學系</h1>
+            <span>Department of Information Management</span>
+          </div>
+        </div>
+        <nav>
+          <div class="menu-toggle">
+            <span class="material-symbols-outlined">menu</span>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" onclick="showSection('home')" class="active"
+                >回首頁</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" onclick="showSection('about')">關於本系</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" onclick="showSection('teacher')">師資介紹</a>
+            </li>
+            <li class="nav-item"><a href="#">課程及獎學金</a></li>
+            <li class="nav-item"><a href="#">招生訊息</a></li>
+            <li class="nav-item"><a href="#">企業導師專區</a></li>
+            <li class="nav-item"><a href="#">活動剪影</a></li>
+            <img class="header-logo" src="./assets/photo/headerLogo.png" />
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="content-section" id="home">
+      <div class="slideshow-container">
+        <div class="slides-wrapper">
+          <div class="slide">
+            <img src="./assets/photo/slide1.png" alt="Slide 1" />
+          </div>
+          <div class="slide">
+            <img src="./assets/photo/slide2.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="./assets/photo/slide3.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="./assets/photo/slide4.png" alt="Slide 4" />
+          </div>
+          <div class="slide">
+            <img src="./assets/photo/slide5.png" alt="Slide 5" />
+          </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <h1 id="info-text">公告訊息</h1>
+      <h3 id="announcement-text">ANNOUNCEMENT</h3>
+      <div class="tabs">
+        <ul>
+          <li class="active">最新消息</li>
+          <li>招生訊息</li>
+          <li>榮譽榜</li>
+          <li>課程消息</li>
+          <li>工讀與獎學金</li>
+          <li>企業導師</li>
+          <li>演講訊息</li>
+          <li>實習與企業徵才</li>
+          <li>其他活動</li>
+        </ul>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>類別</th>
+              <th>標題</th>
+              <th>附件</th>
+              <th>日期</th>
+            </tr>
+          </thead>
+          <tbody id="infoTableBody">
+            <!-- 內容將由 JavaScript 動態生成 -->
+          </tbody>
+        </table>
+      </div>
+      <div class="more-button">
+        <button>
+          更多公告<span class="material-symbols-outlined"> open_run </span>
+        </button>
+      </div>
+    </div>
+
+    <div class="content-section" id="about" style="display: none">
+      <div class="header-container">
+        <nav>
+          <ul>
+            <li><a href="#">系所介紹</a></li>
+            <li><a href="#">聯絡系辦</a></li>
+            <li><a href="#">畢業統計</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main>
+        <section class="intro">
+          <h2>本系宗旨</h2>
+          <div class="content">
+            <i class="intro-icon"
+              ><span class="material-symbols-outlined"> school </span>
+            </i>
+            <p>
+              建構資訊體驗學習生態，培育智識新創環境，致力於培養負責與當責的資訊管理專業人才，以促進學校、企業與社會的永續發展。
+            </p>
+          </div>
+        </section>
+
+        <section class="history">
+          <h2>系史</h2>
+          <div class="content">
+            <i class="intro-icon">
+              <span class="material-symbols-outlined"> account_balance </span>
+            </i>
+            <p>
+              本系成立於七十四學年度，目的在於培養學生開發及資訊系統開發的專業能力，以提供國內企業所需之資訊人才，並致力於資訊管理領域的長遠發展。八十學年，有鑑於社會逐步邁向資訊化，對資訊科技應用的需求益趨殷切，故成立碩士班。繼而在八十三學年度，成立博士班。相較於國內其他資訊管理系，本系以培養能夠管理企業資訊科技應用的經營人才為其特色，使學生具備領導企業邁向智能化及應付國際化之能力。
+            </p>
+          </div>
+        </section>
+
+        <section class="target">
+          <h2>系史</h2>
+          <div class="content">
+            <i class="intro-icon">
+              <span class="material-symbols-outlined"> flag </span>
+            </i>
+            <div class="text-content">
+              <p>
+                本系之教育目標以「科學專業」與「人文涵養」並重為辦學理念，因此在教育內容方面，除了培養學生科技性與管理性的專業知識外，更著重於課堂與生活當中，激發學生主動服務、關懷人群、互助合作的胸襟與精神。如此才能在科技變化激烈迅速的腳步中，充分整合科技、組織、流程、人力等環境因素，達成領導組織創新，提升組織效益與競爭力的目標。
+              </p>
+              <p>
+                在碩士班方面，著重於培養學生在未來的資訊化社會中，能利用相關理論架構之整合與資訊科技、分析方法及商管知識之實務應用，來協助企業辨識經營環境與機會、進行策略規劃，以有效地協助企業解決經營管理的問題，並創造企業的競爭優勢，因此本系在碩士班的教學方向上，涵蓋管理、決策支援及資訊科技等重點領域：
+              </p>
+              <p class="indent">
+                一﹑管理領域著重在有關企業管理各方面之重要領域知識，以及企業如何有效地利用資訊科技，與解決企業因引進資訊科技所帶來的組織問題。重要課題包括企業策略規劃、資訊系統的經濟價值、全球資訊系統、資訊化與產業競爭、企業再造、電子／行動商務等。
+              </p>
+              <p class="indent">
+                二﹑決策支援領域著重於企業資料之分析及決策模式之電腦化，如企業模擬、群體決策支援系統、模糊模式、類神經網路系統、人工智慧、資料探勘等。
+              </p>
+              <p class="indent">
+                三﹑資訊科技應用領域則著重於商管相關資訊科技之學習，以解決企業在引進資訊科技時之技術規劃與開發設計等問題，課題包括資訊系統開發、資料庫設計、網路管理、資料探勘、人工智慧、物聯網、雲端運算、資訊系統安全、多媒體資訊處理等。
+              </p>
+              <p>
+                博士班方面，則著重於培育優秀的資管師資及人才，使他們具備從事資訊管理教育及研究的能力，並針對國內外企業之實務環境，發掘有關資訊管理的重要問題，探究問題發生的原因，及這些問題對個人及組織的衝擊。最後，再將之抽象化成理論觀念，並完成實證調查研究，提出更深刻之見解。另外，我們也從事資訊科技相關研究，例如軟體工程、資訊安全、物聯網、資料探勘、人工智慧、物聯網、雲端運算、行動運算與金融科技。
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="content-section" id="teacher" style="display: none">
+      <div class="header-container">
+        <nav>
+          <ul>
+            <li><a href="#">專任教師</a></li>
+            <li><a href="#">兼任教師</a></li>
+            <li><a href="#">退休教師</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="teacher-grid">
+        <div class="teacher-card">
+          <div class="card-header">
+            <h3>王小明</h3>
+            <span class="position">教授</span>
+          </div>
+          <div class="card-body">
+            <div class="photo">
+              <img src="./assets/photo/teacher1.jpg" alt="王小明教授" />
+            </div>
+            <div class="info">
+              <div class="info-section">
+                <h4>學歷</h4>
+                <p>國立台灣大學資訊工程博士</p>
+              </div>
+              <div class="info-section">
+                <h4>專長</h4>
+                <p>人工智慧、機器學習、大數據分析</p>
+              </div>
+              <div class="info-section">
+                <h4>獎項</h4>
+                <p>科技部傑出研究獎、教學優良獎</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img
+            src="./assets/photo/logo.png"
+            alt="Department of Information Management"
+          />
+          <div class="footer-logo-text">
+            <h1>資訊管理學系</h1>
+            <span>Department of Information Management</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/data.js"></script>
+  </body>
+</html>
