@@ -97,16 +97,6 @@ footer {
   );
 }
 
-.container-lower ::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -20px;
-  right: -20px;
-  bottom: 0;
-  z-index: -1;
-}
-
 .container-lower nav ul li a {
   font-size: 25px;
 }
@@ -742,12 +732,16 @@ nav ul li a {
     z-index: 1000;
     transform: translateY(-20px);
     opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 
   .nav-list.active {
     display: block;
     transform: translateY(0);
     opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
   }
 
   .nav-list li {
