@@ -895,7 +895,7 @@ nav ul li a {
     top: 0;
     right: 0;
     width: 50%;
-    background-color: white;
+    background-color: rgba(149, 238, 232, 0.7);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     opacity: 0;
     border-radius: 10%;
@@ -926,6 +926,11 @@ nav ul li a {
   .upper-nav li a {
     padding: 15px;
     display: block;
+  }
+
+  .upper-nav li a:hover {
+    background-color: rgba(30, 197, 186, 0.7);
+    color: white;
   }
 }
 
