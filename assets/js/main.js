@@ -206,6 +206,18 @@ function toggleMenu() {
   });
 }
 
+document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.querySelector('.upper-nav').classList.toggle('active');
+});
+
+document.querySelectorAll('.upper-nav a').forEach(item => {
+  item.addEventListener('click', function() {
+    document.querySelector('.mobile-menu-toggle').classList.remove('active');
+    document.querySelector('.upper-nav').classList.remove('active');
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   setupNavLinks("about");
   setupNavLinks("teacher");
